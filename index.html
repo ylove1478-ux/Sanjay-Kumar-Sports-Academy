@@ -8,35 +8,98 @@
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#f6f8fa}
 .container{width:min(1120px,92%);margin:auto}
-header{position:fixed;top:0;width:100%;background:rgba(8,15,22,.96);color:#fff;z-index:20}
+header{position:fixed;top:0;width:100%;background:#080f16;color:#fff;z-index:20}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:18px}.brand img{width:52px;height:52px;border-radius:50%;background:#fff}
 .brand b{color:#ff5a1f}
 nav{display:flex;gap:22px;font-weight:700} 
 nav a{color:#fff;text-decoration:none;padding:8px 0}
 nav a:hover{color:#ff5a1f}
-.menu{display:none;font-size:28px;cursor:pointer}
+.menu{display:none;font-size:28px;cursor:pointer;color:#fff}
 
-.hero{min-height:100vh;padding-top:76px;display:flex;align-items:center;color:#fff;background:linear-gradient(105deg,rgba(3,9,15,.94),rgba(5,20,30,.68)),url('academy-logo.jpg') center/cover no-repeat}
-.hero h1{font-size:60px;margin:18px 0;line-height:1.2}
+.hero{min-height:100vh;padding-top:76px;display:flex;align-items:center;color:#fff;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('academy-logo.jpg') center/cover no-repeat}
+.hero h1{font-size:50px;margin:18px 0;line-height:1.2}
 .btn{background:#ff5a1f;color:#fff;padding:13px 23px;border-radius:8px;font-weight:800;margin:5px 8px 5px 0;display:inline-block;text-decoration:none}
 .btn:hover{background:#e64a19}
-.btn.alt{background:transparent;border:2px solid #fff}
-.btn.alt:hover{background:#fff;color:#000}
-.social-home{margin-top:25px}.social-link{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.2);color:#fff;font-weight:800;text-decoration:none}
-.social-link:hover{background:rgba(255,255,255,.05)}
-.social-logo{width:55px;height:55px;background:#1a1a1a;border-radius:14px;display:flex;align-items:center;justify-content:center}
-.social-logo img{width:30px;filter:invert(1)}
-section{padding:82px 0}.section-head{text-align:center;margin-bottom:42px}.section-head h2{font-size:38px;color:#101923}
-.about{background:#101923;color:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+
+section{padding:70px 0}.section-head{text-align:center;margin-bottom:40px}.section-head h2{font-size:36px;color:#101923}
+.about{background:#101923;color:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .logo-large{width:100%;border-radius:20px;background:#fff;padding:10px}
 
 /* DIRECTOR CARD */
 .director-card{display:flex;gap:20px;align-items:center;background:rgba(255,90,31,.1);border-left:4px solid #ff5a1f;padding:20px;border-radius:12px;margin:20px 0}
 .director-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #ff5a1f}
 .director-info h3{color:#ff5a1f;font-size:22px;margin-bottom:5px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:#fff;padding:25px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:#fff;padding:25px;border-radius:16px}
 .card h3{color:#ff5a1f;margin-bottom:10px}
 
-/* SOCIAL SECTION */
-.social-section{background:#fff;text
+.social-section{background:#fff;text-align:center}
+.social-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.social-big-btn{display:flex;align-items:center;gap:12px;padding:16px 30px;border-radius:12px;font-weight:800;font-size:18px;color:#fff;text-decoration:none}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px}
+.contact{background:#eef2f5}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-box{background:#101923;color:#fff;padding:30px;border-radius:16px}
+.contact-box h3{color:#ff5a1f;margin-bottom:15px}
+footer{background:#080d13;color:#b8c1c9;text-align:center;padding:25px}
+
+/* MOBILE FIX */
+@media(max-width:700px){
+  nav{display:none;position:absolute;top:76px;right:5%;background:#080f16;padding:20px;border-radius:12px;flex-direction:column;width:200px;gap:15px}
+  nav.open{display:flex}
+  .menu{display:block}
+  .hero h1{font-size:34px}
+  .grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .director-card{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand"><img src="academy-logo.jpg"><span>SANJAY KUMAR <b>SPORTS ACADEMY</b></span></a>
+    <div class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</div>
+    <nav>
+      <a href="#home" onclick="document.querySelector('nav').classList.remove('open')">Home</a>
+      <a href="#about" onclick="document.querySelector('nav').classList.remove('open')">About</a>
+      <a href="#services" onclick="document.querySelector('nav').classList.remove('open')">Services</a>
+      <a href="#gallery" onclick="document.querySelector('nav').classList.remove('open')">Gallery</a>
+      <a href="#contact" onclick="document.querySelector('nav').classList.remove('open')">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <span style="background:#ff5a1f;padding:7px 14px;border-radius:30px;font-weight:800">Chandigarh Sector 46</span>
+    <h1>Learn. Practice.<br>Perform. Achieve.</h1>
+    <a class="btn" href="https://wa.me/919518195966" target="_blank">Join on WhatsApp</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-head"><h2 style="color:#fff">About Us</h2></div>
+    <div class="about-grid">
+      <img class="logo-large" src="academy-logo.jpg">
+      <div>
+        <h2>Professional Training. Stronger Athletes.</h2>
+        <div class="director-card">
+          <img class="director-photo" src="academy-logo.jpg" alt="Neeraj Kumar">
+          <div class="director-info">
+            <h3>Neeraj Kumar</h3>
+            <p>Director of SKSA</p>
+          </div>
+        </div>
+        <ul style="list-style:none;margin-top:15px;font-size:17px">
+          <li>✓ Cricket coaching</li>
+          <li>✓ Swimming coaching</li>
+          <li>✓ Athletics training</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services"><div class="container"><div class="section-head"><h2>Our
