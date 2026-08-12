@@ -1,102 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanjay Kumar Sports Academy | Chandigarh</title>
-<meta name="description" content="Sanjay Kumar Sports Academy, Chandigarh Sector 46. Coaching in Cricket, Swimming, Athletics and Personal Coaching.">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#f6f8fa;line-height:1.6}
-a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
-header{position:fixed;top:0;width:100%;z-index:20;background:rgba(8,15,22,.96);color:#fff;box-shadow:0 2px 18px #0004}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:900}.brand img{width:52px;height:52px;object-fit:contain;border-radius:50%;background:#fff}.brand span{color:#ff5a1f}
-nav{display:flex;gap:22px;font-weight:700;font-size:14px}nav a:hover{color:#ff6a2a}.menu{display:none;font-size:28px}
-.hero{min-height:100vh;padding-top:76px;display:flex;align-items:center;color:#fff;background:linear-gradient(105deg,rgba(3,9,15,.94),rgba(5,20,30,.68)),url('academy-logo.jpg') center/cover no-repeat}
-.hero-content{max-width:760px}.tag{display:inline-block;background:#ff5a1f;padding:7px 14px;border-radius:30px;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}
-h1{font-size:clamp(40px,7vw,76px);line-height:1.02;margin-bottom:18px}.hero p{font-size:19px;color:#e8edf1;max-width:650px;margin-bottom:28px}
-.btn{display:inline-block;background:#ff5a1f;color:#fff;padding:13px 23px;border-radius:8px;font-weight:800;margin:5px 8px 5px 0;border:2px solid #ff5a1f}.btn.alt{background:transparent;border-color:#fff}
-section{padding:82px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.section-head h2{font-size:38px;line-height:1.1;margin-bottom:10px}.section-head p{color:#687582}
-.about{background:#101923;color:#fff}.about .section-head p{color:#c1cad1}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.logo-large{width:100%;max-height:500px;object-fit:contain;border-radius:20px;background:#fff}.about ul{list-style:none;margin-top:18px}.about li{margin:11px 0;color:#dbe2e7}.about li:before{content:"✓";color:#ff6a2a;font-weight:bold;margin-right:10px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:#fff;border-radius:16px;padding:25px;box-shadow:0 10px 30px #17202a12;border:1px solid #e7ebee}.icon{font-size:35px;margin-bottom:10px}.card h3{margin-bottom:7px}.card p{color:#687582}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px}.gallery .logo-shot{object-fit:contain;background:#fff}
-.contact{background:#eef2f5}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}.contact-box{background:#101923;color:#fff;padding:30px;border-radius:16px}.contact-box p{margin:15px 0;color:#d4dce2}.contact-box strong{color:#ff6a2a}
-.form{background:#fff;padding:28px;border-radius:16px;box-shadow:0 10px 30px #17202a12}input,textarea,select{width:100%;padding:13px;margin-bottom:14px;border:1px solid #d8dfe5;border-radius:8px;font:inherit}textarea{height:120px}
-footer{background:#080d13;color:#b8c1c9;text-align:center;padding:28px}.footer-name{color:#fff;font-weight:800}
-@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.about-grid,.contact-grid{grid-template-columns:1fr}}
-@media(max-width:700px){nav{display:none;position:absolute;top:76px;left:0;width:100%;background:#0a1018;flex-direction:column;padding:18px 5%;gap:14px}.nav.open nav{display:flex}.menu{display:block}.brand{font-size:13px}.brand img{width:46px;height:46px}.hero{min-height:90vh}.hero p{font-size:16px}section{padding:62px 0}.grid,.about-grid,.contact-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:165px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sanjay Kumar Sports Academy, Chandigarh Sector 46 — professional sports coaching, training and athlete development.">
+  <title>Sanjay Kumar Sports Academy | Chandigarh Sector 46</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><div class="container nav">
-<a class="brand" href="#home"><img src="academy-logo.jpg" alt="SKSA Logo"><span>SANJAY KUMAR <b>SPORTS ACADEMY</b></span></a>
-<div class="menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</div>
-<nav><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a href="https://youtube.com/@sanjaykumarsportsacademy" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/sanjaykumarsportsacademy/" target="_blank" rel="noopener">Instagram</a></nav>
-</div></header>
+<header class="site-header">
+  <a class="brand" href="#home">
+    <img src="logo.jpg" alt="Sanjay Kumar Sports Academy logo">
+    <span>SANJAY KUMAR <b>SPORTS ACADEMY</b></span>
+  </a>
+  <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#programs">Coaching</a>
+    <a href="#achievements">Achievements</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<section class="hero" id="home"><div class="container hero-content">
-<span class="tag">Chandigarh Sector 46</span>
-<h1>Learn. Practice.<br>Perform. Achieve.</h1>
-<p>Welcome to <b>Sanjay Kumar Sports Academy</b> — dedicated sports coaching for athletes who want to learn, improve and achieve their goals.</p>
-<a class="btn" href="https://wa.me/919518195966?text=Hello%20Sanjay%20Kumar%20Sports%20Academy%2C%20I%20want%20to%20join%20the%20academy." target="_blank">Join on WhatsApp</a>
-<a class="btn alt" href="#services">View Coaching</a>
-</div></section>
+<main>
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">CHANDIGARH • SECTOR 46</span>
+    <h1>Train Hard.<br><span>Perform Better.</span><br>Achieve More.</h1>
+    <p>Professional sports coaching for athletes who want to learn, improve and perform at their best.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Join the Academy</a>
+      <a class="btn ghost" href="#programs">View Coaching</a>
+    </div>
+  </div>
+</section>
 
-<section class="about" id="about"><div class="container">
-<div class="section-head"><h2>About Sanjay Kumar Sports Academy</h2><p>One team. One work. One goal — helping athletes become better every day.</p></div>
-<div class="about-grid"><img class="logo-large" src="academy-logo.jpg" alt="Sanjay Kumar Sports Academy Logo">
-<div><h2>Professional Training. Stronger Athletes.</h2>
-<p>Our academy provides focused coaching and athletic development in a disciplined, supportive environment. Whether you are starting out or preparing to compete, our programs are designed around consistent practice and performance.</p>
-<ul><li>Cricket coaching</li><li>Swimming coaching</li><li>Athletics training</li><li>Personal coaching</li><li>Fitness, discipline and performance development</li></ul>
-</div></div></div></section>
+<section class="stats">
+  <div><strong>Expert</strong><span>Coaching</span></div>
+  <div><strong>Focused</strong><span>Training</span></div>
+  <div><strong>Real</strong><span>Performance</span></div>
+  <div><strong>One</strong><span>Team • One Goal</span></div>
+</section>
 
-<section id="services"><div class="container">
-<div class="section-head"><h2>Our Coaching Programs</h2><p>Choose the training that matches your sporting goal.</p></div>
-<div class="grid">
-<div class="card"><div class="icon">🏏</div><h3>Cricket Coaching</h3><p>Skill development, practice sessions, technique and match-focused preparation.</p></div>
-<div class="card"><div class="icon">🏊</div><h3>Swimming</h3><p>Swimming training focused on technique, endurance, confidence and performance.</p></div>
-<div class="card"><div class="icon">🏃</div><h3>Athletics</h3><p>Speed, endurance, agility and athletic conditioning for developing athletes.</p></div>
-<div class="card"><div class="icon">🎯</div><h3>Personal Coaching</h3><p>Individual attention and customized training based on your goals and level.</p></div>
-</div></div></section>
+<section id="about" class="section about">
+  <div>
+    <span class="eyebrow">WHO WE ARE</span>
+    <h2>Building athletes with discipline, confidence & consistency.</h2>
+    <p>Sanjay Kumar Sports Academy is focused on structured sports coaching and athlete development in Chandigarh. Our approach combines regular practice, fitness, discipline and performance-focused training.</p>
+    <p>Whether you are starting your journey or preparing to perform at a higher level, the goal is simple: better training, better habits and better performance.</p>
+    <a class="text-link" href="#contact">Talk to the Academy →</a>
+  </div>
+  <div class="about-card">
+    <span>SKSA</span>
+    <h3>Learn. Practice. Perform.</h3>
+    <p>Train with purpose. Grow with the team.</p>
+  </div>
+</section>
 
-<section id="gallery"><div class="container">
-<div class="section-head"><h2>Academy Gallery</h2><p>Academy identity and sports training showcase.</p></div>
-<div class="gallery">
-<img class="logo-shot" src="academy-logo.jpg" alt="Academy Logo">
-<img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=900&q=85" alt="Swimming training">
-<img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85" alt="Athletics">
-<img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=85" alt="Football training">
-<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=85" alt="Fitness">
-<img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=900&q=85" alt="Sports team">
-</div></div></section>
+<section id="programs" class="section dark">
+  <span class="eyebrow">COACHING PROGRAMS</span>
+  <h2>Training designed around your goals.</h2>
+  <div class="cards">
+    <article><div class="icon">01</div><h3>Sports Coaching</h3><p>Structured practice sessions with focus on technique, discipline and performance.</p></article>
+    <article><div class="icon">02</div><h3>Fitness & Conditioning</h3><p>Build strength, stamina, mobility and fitness habits that support athletic performance.</p></article>
+    <article><div class="icon">03</div><h3>Performance Training</h3><p>Focused training for athletes who want to improve consistency and competition readiness.</p></article>
+  </div>
+</section>
 
-<section class="contact" id="contact"><div class="container">
-<div class="section-head"><h2>Contact & Admission</h2><p>Contact us to ask about batches, fees, timings and admission.</p></div>
-<div class="contact-grid">
-<div class="contact-box"><h2>Sanjay Kumar Sports Academy</h2>
-<p><strong>📍 Address</strong><br>Chandigarh Sector 46</p>
-<p><strong>📞 Call / WhatsApp</strong><br>9518195966</p>
-<p><strong>🏆 Coaching</strong><br>Cricket • Swimming • Athletics • Personal Coaching</p>
-<a class="btn" href="tel:+919518195966">Call Now</a>
-<a class="btn" href="https://wa.me/919518195966" target="_blank">WhatsApp</a>
-</div>
-<form class="form" onsubmit="sendForm(event)">
-<input id="name" required placeholder="Your Name">
-<input id="phone" required placeholder="Phone Number">
-<select id="sport" required><option value="">Select Coaching</option><option>Cricket</option><option>Swimming</option><option>Athletics</option><option>Personal Coaching</option></select>
-<textarea id="message" placeholder="Your message / preferred batch"></textarea>
-<button class="btn" type="submit">Send Enquiry on WhatsApp</button>
-</form>
-</div></div></section>
+<section id="achievements" class="section">
+  <span class="eyebrow">WHY SKSA</span>
+  <h2>More than practice. It's a training culture.</h2>
+  <div class="features">
+    <div><b>01</b><h3>Discipline</h3><p>Consistent routines and serious training habits.</p></div>
+    <div><b>02</b><h3>Guidance</h3><p>Coaching that keeps athletes focused on improvement.</p></div>
+    <div><b>03</b><h3>Community</h3><p>A positive team environment that motivates athletes.</p></div>
+    <div><b>04</b><h3>Progress</h3><p>Train, measure, improve and keep moving forward.</p></div>
+  </div>
+</section>
 
-<footer><div class="container"><div class="footer-name">Sanjay Kumar Sports Academy</div>Chandigarh Sector 46 • Call/WhatsApp: 9518195966<br><a href="https://youtube.com/@sanjaykumarsportsacademy" target="_blank" rel="noopener">YouTube</a> • <a href="https://www.instagram.com/sanjaykumarsportsacademy/" target="_blank" rel="noopener">Instagram</a><br>© 2026 All Rights Reserved.</div></footer>
-<script>
-function sendForm(e){
-e.preventDefault();
-let n=document.getElementById('name').value,p=document.getElementById('phone').value,s=document.getElementById('sport').value,m=document.getElementById('message').value;
-let text=`Hello Sanjay Kumar Sports Academy,%0A%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0ACoaching: ${encodeURIComponent(s)}%0AMessage: ${encodeURIComponent(m)}`;
-window.open('https://wa.me/919518195966?text='+text,'_blank');
-}
-</script>
-</body></html>
+<section id="gallery" class="section dark">
+  <span class="eyebrow">GALLERY</span>
+  <h2>Training. Teamwork. Achievements.</h2>
+  <div class="gallery">
+    <div>TRAINING PHOTO</div><div>ATHLETES</div><div>EVENT</div>
+    <div>COMPETITION</div><div>TEAM</div><div>ACHIEVEMENT</div>
+  </div>
+  <p class="hint">Replace these six blocks with your real academy photos for the final version.</p>
+</section>
+
+<section id="contact" class="section contact">
+  <div>
+    <span class="eyebrow">GET STARTED</span>
+    <h2>Ready to start your training?</h2>
+    <p>Contact Sanjay Kumar Sports Academy for coaching details, timings and admission information.</p>
+  </div>
+  <div class="contact-box">
+    <a class="contact-row" href="tel:+919000000000"><span>CALL</span><b>+91 XXXXX XXXXX</b></a>
+    <a class="contact-row" href="https://wa.me/919000000000"><span>WHATSAPP</span><b>Message the Academy</b></a>
+    <div class="contact-row"><span>LOCATION</span><b>Chandigarh Sector 46</b></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><b>SANJAY KUMAR SPORTS ACADEMY</b><span>Learn • Practice • Perform • Achieve</span></div>
+  <div class="social"><a href="https://youtube.com/@sanjaykumarsportsacademy" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/sanjaykumarsportsacademy" target="_blank" rel="noopener">Instagram</a></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
