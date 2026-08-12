@@ -16,6 +16,12 @@ nav{display:flex;gap:22px;font-weight:700;font-size:14px}nav a:hover{color:#ff6a
 .hero-content{max-width:760px}.tag{display:inline-block;background:#ff5a1f;padding:7px 14px;border-radius:30px;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}
 h1{font-size:clamp(40px,7vw,76px);line-height:1.02;margin-bottom:18px}.hero p{font-size:19px;color:#e8edf1;max-width:650px;margin-bottom:28px}
 .btn{display:inline-block;background:#ff5a1f;color:#fff;padding:13px 23px;border-radius:8px;font-weight:800;margin:5px 8px 5px 0;border:2px solid #ff5a1f}.btn.alt{background:transparent;border-color:#fff}
+.social-home{display:flex;gap:14px;margin-top:14px;align-items:center}
+.social-icon{width:46px;height:46px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#fff;font-weight:900;font-size:23px;box-shadow:0 4px 14px #0005;transition:.2s}
+.social-icon:hover{transform:translateY(-2px)}
+.social-icon.youtube{color:#ff0000}
+.social-icon.instagram{color:#d62976;font-size:30px}
+
 section{padding:82px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.section-head h2{font-size:38px;line-height:1.1;margin-bottom:10px}.section-head p{color:#687582}
 .about{background:#101923;color:#fff}.about .section-head p{color:#c1cad1}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
 .logo-large{width:100%;max-height:500px;object-fit:contain;border-radius:20px;background:#fff}.about ul{list-style:none;margin-top:18px}.about li{margin:11px 0;color:#dbe2e7}.about li:before{content:"✓";color:#ff6a2a;font-weight:bold;margin-right:10px}
@@ -32,7 +38,7 @@ footer{background:#080d13;color:#b8c1c9;text-align:center;padding:28px}.footer-n
 <header><div class="container nav">
 <a class="brand" href="#home"><img src="academy-logo.jpg" alt="SKSA Logo"><span>SANJAY KUMAR <b>SPORTS ACADEMY</b></span></a>
 <div class="menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</div>
-<nav><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a href="https://youtube.com/@sanjaykumarsportsacademy" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/sanjaykumarsportsacademy/" target="_blank" rel="noopener">Instagram</a></nav>
+<nav><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <section class="hero" id="home"><div class="container hero-content">
@@ -41,6 +47,10 @@ footer{background:#080d13;color:#b8c1c9;text-align:center;padding:28px}.footer-n
 <p>Welcome to <b>Sanjay Kumar Sports Academy</b> — dedicated sports coaching for athletes who want to learn, improve and achieve their goals.</p>
 <a class="btn" href="https://wa.me/919518195966?text=Hello%20Sanjay%20Kumar%20Sports%20Academy%2C%20I%20want%20to%20join%20the%20academy." target="_blank">Join on WhatsApp</a>
 <a class="btn alt" href="#services">View Coaching</a>
+<div class="social-home" aria-label="Social media">
+<a class="social-icon youtube" href="https://youtube.com/@sanjaykumarsportsacademy" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">▶</a>
+<a class="social-icon instagram" href="https://www.instagram.com/sanjaykumarsportsacademy/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">◎</a>
+</div>
 </div></section>
 
 <section class="about" id="about"><div class="container">
@@ -90,7 +100,7 @@ footer{background:#080d13;color:#b8c1c9;text-align:center;padding:28px}.footer-n
 </form>
 </div></div></section>
 
-<footer><div class="container"><div class="footer-name">Sanjay Kumar Sports Academy</div>Chandigarh Sector 46 • Call/WhatsApp: 9518195966<br><a href="https://youtube.com/@sanjaykumarsportsacademy" target="_blank" rel="noopener">YouTube</a> • <a href="https://www.instagram.com/sanjaykumarsportsacademy/" target="_blank" rel="noopener">Instagram</a><br>© 2026 All Rights Reserved.</div></footer>
+<footer><div class="container"><div class="footer-name">Sanjay Kumar Sports Academy</div>Chandigarh Sector 46 • Call/WhatsApp: 9518195966<br>© 2026 All Rights Reserved.</div></footer>
 <script>
 function sendForm(e){
 e.preventDefault();
